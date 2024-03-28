@@ -1,0 +1,77 @@
+.WeatherToday {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+  margin: 10px 10px;
+  color: white;
+  width: 652px;
+  height: 442px;
+  border-radius: 15px;
+  background-color: rgba(20, 20, 20, 0.5);
+  gap: 60px;
+}
+
+.date {
+  font-family: 'Gilroy Ultra Light';
+  margin-left: 28px;
+  margin-bottom: 20px;
+  color: white;
+}
+.weatherNow {
+  margin-left: 28px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+.weather {
+  font-family: 'Gilroy Extra Bold';
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.weatherPhenomenon {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  font-family: 'Gilroy Ultra Light';
+  font-weight: 400;
+  font-size: 14px;
+}
+.feltWeather {
+  font-weight: 500;
+  font-size: 22px;
+  padding-top: 16px;
+  padding-right: 58px;
+}
+.temperature {
+  font-size: 84px;
+  font-family: 'Gilroy Extra Bold';
+  font-weight: 700;
+  font-style: normal;
+}
+.weatherParams {
+  margin-left: 28px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: center;
+  gap: 70px;
+  color: rgba(255, 255, 255, 0.6);
+  font-weight: 400;
+  font-size: 14px;
+}
+.weatherParamsWind {
+  display: flex;
+
+  gap: 5px;
+}
+.weatherParamsPressure {
+  display: flex;
+  gap: 5px;
+}
+.weatherParamsHumidity {
+  display: flex;
+  gap: 5px;
+}

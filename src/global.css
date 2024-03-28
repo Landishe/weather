@@ -1,0 +1,75 @@
+body {
+  font-weight: 400;
+  min-width: 320px;
+}
+
+/* стили для доступного скрытия элементов. Нужно для скринридеров */
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  top: 0;
+  left: 0;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+
+/* ccs variables */
+:root {
+  --constantPrimary: #007041;
+  --constantPrimaryAlpha25: rgb(0 112 65/ 25%);
+  --constantWhiteAlpha10: rgb(255 255 255/ 10%);
+  --constantPrimaryTypography: #179b64;
+  --constantPrimaryLight: #e0ede8;
+  --constantPrimaryDark: #282f2c;
+  --constantPrimaryDarkHover: #444746;
+  --constantRed: #d14931;
+
+  /* Так дем можно задавать в переменных тени */
+  --smallItemShadow: 0 1px 10px 0 rgb(0 0 0/ 6%);
+  --bigSectionShadow: 0 0 25px 0 rgb(0 0 0 /8%);
+  --blockShadow: 0 4px 12px 0 rgba(0 0 0/ 10%);
+
+  /* и числа */
+  --titleMarginBottom: 24px;
+  --titleBigMarginBottom: 32px;
+  --breadcrumbsMarginBottom: 20px;
+  --blockGap: 20px;
+}
+
+/* css переменные можно перезаписывать, если нужно */
+@media screen and (max-width: 992px) {
+  :root {
+    --distanceBetweenBlocks: 84px;
+    --horizontalPadding: 16px;
+    --blockGap: 12px;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*:focus {
+  outline: none;
+}
+
+/* кастомные стили для фокуса с клавиатуры */
+*:focus-visible {
+  border: 2px solid var(--contrastPrimary);
+  outline-offset: 4px;
+}
+
+button {
+  cursor: pointer;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px;
+  background-color: var(--backgroundPrimary);
+}

@@ -1,0 +1,10 @@
+.titlePage {
+  display: grid;
+  width: auto;
+  height: 1225px;
+  background-image: url('./pictures/storm.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  
+}
