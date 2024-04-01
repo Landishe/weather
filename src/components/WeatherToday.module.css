@@ -30,33 +30,31 @@
   flex-direction: row;
   gap: 10px;
 }
-
-.weatherPhenomenon {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  font-family: 'Gilroy Ultra Light';
-  font-weight: 400;
-  font-size: 14px;
-}
-.feltWeather {
-  font-weight: 500;
-  font-size: 22px;
-  padding-top: 16px;
-  padding-right: 58px;
-}
 .temperature {
   font-size: 84px;
   font-family: 'Gilroy Extra Bold';
   font-weight: 700;
   font-style: normal;
 }
+.weatherPhenomenon {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-family: 'Gilroy Ultra Light';
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.feltWeather {
+  font-weight: 500;
+  font-size: 22px;
+  padding-top: 16px;
+  padding-right: 58px;
+}
+
 .weatherParams {
   margin-left: 28px;
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-content: center;
   gap: 70px;
   color: rgba(255, 255, 255, 0.6);
   font-weight: 400;
@@ -64,14 +62,22 @@
 }
 .weatherParamsWind {
   display: flex;
-
   gap: 5px;
+}
+.weatherParamsWindSpeed {
+  align-content: center;
 }
 .weatherParamsPressure {
   display: flex;
   gap: 5px;
 }
+.weatherParamsPressurePersent {
+  align-content: center;
+}
 .weatherParamsHumidity {
   display: flex;
   gap: 5px;
+}
+.weatherParamsHumidityText {
+  align-content: center;
 }

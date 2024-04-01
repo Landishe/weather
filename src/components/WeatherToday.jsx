@@ -13,12 +13,12 @@ function WeatherToday() {
           <p className={styles.temperature}>+18</p>
           <div className={styles.weatherPhenomenon}>
             <img
-              width={68}
-              height={90}
+              width={58}
+              height={53}
               src={IconWeather}
               alt="ощущение погоды"
             />
-            <p>гроза</p>
+            <p className={styles.weatherPhenomenonContent}>гроза</p>
           </div>
         </div>
         <p className={styles.feltWeather}>ощущается как +10</p>
@@ -31,7 +31,7 @@ function WeatherToday() {
             src={IconWind}
             alt="скорость ветра"
           />
-          <p>2.5 м/с Ю</p>
+          <p className={styles.weatherParamsWindSpeed}>2.5 м/с Ю</p>
         </div>
         <div className={styles.weatherParamsPressure}>
           <img
@@ -40,7 +40,7 @@ function WeatherToday() {
             src={IconPressure}
             alt="влажность"
           />
-          <p>87%</p>
+          <p className={styles.weatherParamsPressurePersent}>87%</p>
         </div>
         <div className={styles.weatherParamsHumidity}>
           <img
@@ -49,7 +49,7 @@ function WeatherToday() {
             src={IconHumidity}
             alt="давление мм рт. столба"
           />
-          <p>764 мм рт. ст.</p>
+          <p className={styles.weatherParamsHumidityText}>764 мм рт. ст.</p>
         </div>
       </div>
     </section>
