@@ -1,13 +1,11 @@
-import './App.css';
-import TitlePage from './components/TitlePage';
-
+import "./App.css";
+import TitlePage from "./components/TitlePage";
 
 function App() {
   return (
     <div className="App">
-      <TitlePage>
-       
-      </TitlePage>
+      {/* можно так    <TitlePage/> */}
+      <TitlePage></TitlePage>
     </div>
   );
 }

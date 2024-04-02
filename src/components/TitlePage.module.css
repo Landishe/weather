@@ -1,10 +1,11 @@
 .titlePage {
   display: grid;
   width: auto;
+  /* высоту лучше задать в min-height: 100vh. тогда не будет вертикального скролла */
   height: 1225px;
-  background-image: url('./pictures/storm.png');
+  /* не хватает полупрозрачной черной подложки(смотри макет) */
+  background-image: url("./pictures/storm.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  
 }

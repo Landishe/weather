@@ -1,3 +1,5 @@
+/* дублируются стили в global и index.css нужно удалить один из файлов */
+
 body {
   font-weight: 400;
   min-width: 320px;
@@ -16,6 +18,7 @@ input[type="radio"].visually-hidden {
   margin: -1px;
 }
 
+/* Эти переменные не относятся к данному проекту. Удали отсюда */
 /* ccs variables */
 :root {
   --constantPrimary: #007041;
@@ -47,6 +50,7 @@ input[type="radio"].visually-hidden {
     --blockGap: 12px;
   }
 }
+/* до сюда */
 
 * {
   margin: 0;
@@ -58,6 +62,7 @@ input[type="radio"].visually-hidden {
   outline: none;
 }
 
+/* эти стили так же не относятся к данному проекту */
 /* кастомные стили для фокуса с клавиатуры */
 *:focus-visible {
   border: 2px solid var(--contrastPrimary);
@@ -71,5 +76,6 @@ button {
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 100px;
+  /* эти стили так же не относятся к данному проекту */
   background-color: var(--backgroundPrimary);
 }
