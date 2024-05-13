@@ -1,13 +1,43 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
+  min-width: 320px;
+  font-family: 'Gilroy Ultra Light';
+}
+@font-face {
+  font-family: 'Gilroy Extra Bold';
+  src: url('/src/assets/fonts/Gilroy-ExtraBold.ttf');
+}
+@font-face {
+  font-family: 'Gilroy Ultra Light';
+  src: url('/src/assets/fonts/Gilroy-Light.ttf');
+}
+/* стили для доступного скрытия элементов. Нужно для скринридеров */
+.visually-hidden:not(:focus):not(:active),
+input[type='checkbox'].visually-hidden,
+input[type='radio'].visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  top: 0;
+  left: 0;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*:focus {
+  outline: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+html {
+  background-color: var(--backgroundPrimary);
 }
