@@ -10,6 +10,7 @@ function App() {
     <div className="App">
       <MainPage />
       <Weather></Weather>
+      <div>бесит</div>
     </div>
   );
 }
