@@ -51,10 +51,8 @@ function WeatherData() {
     // Данные загружены, можно безопасно использовать weatherData
     return (
       <>
-        {/* <p className={styles.date}>
-          Максимальная температура: {weatherData?.daily?.temperature_2m_max}
-        </p> */}
-        <WeatherWeek weatherData={weatherData.daily.time} /> 
+        
+        <p>{weatherData.daily.time} </p>
       </>
     );
   }
