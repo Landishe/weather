@@ -1,0 +1,73 @@
+.isLoading{
+  /* background-color: rgba(0, 0, 0, 0.5); */
+  backdrop-filter: blur(15px);
+  padding-left: 28px;
+  border-radius: 5px;
+  color: rgb(255, 255, 255);
+  height: 100%;
+
+  border: 6px solid #f3f3f3; 
+    border-top: 6px solid #3498db; 
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 2s linear infinite;
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.weatherWeek {
+  display: grid;
+  grid-template-columns: repeat(7, 146px);
+  max-width: 1160px;
+  justify-content: space-between;
+  justify-self: stretch;
+  gap: 24px;
+}
+.day {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 217px;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(15px);
+    border-radius: 15px;
+    color: rgb(255, 255, 255);
+}
+.dayWeek {
+  padding-top: 12px;
+  padding-bottom: 4px;
+  font-weight: 700;
+  font-size: 18px;
+}
+.date {
+  padding-bottom: 20px;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.temperatureWeek {
+  content: '\00B0';
+  padding-top: 20px;
+  font-weight: 500;
+  font-size: 34px;
+}
+.temperatureWeek::after {
+  content: '\00B0';
+}
+
+@media (max-width: 776px) {
+  .weatherWeek {
+  display: grid;
+  grid-template-columns: repeat(7, 145px);
+  max-width: 1159px;
+  justify-content: space-between;
+  gap: 24px;
+  }
+  .day {
+  width: 145px;
+}
+}

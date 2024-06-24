@@ -1,0 +1,43 @@
+body {
+  font-weight: 400;
+  min-width: 320px;
+  font-family: 'Gilroy Ultra Light';
+}
+@font-face {
+  font-family: 'Gilroy Extra Bold';
+  src: url('/src/assets/fonts/Gilroy-ExtraBold.ttf');
+}
+@font-face {
+  font-family: 'Gilroy Ultra Light';
+  src: url('/src/assets/fonts/Gilroy-Light.ttf');
+}
+/* стили для доступного скрытия элементов. Нужно для скринридеров */
+.visually-hidden:not(:focus):not(:active),
+input[type='checkbox'].visually-hidden,
+input[type='radio'].visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  top: 0;
+  left: 0;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*:focus {
+  outline: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+html {
+  background-color: var(--backgroundPrimary);
+}

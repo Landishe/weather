@@ -1,0 +1,156 @@
+.isLoading{
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(15px);
+  padding-left: 28px;
+  border-radius: 15px;
+  color: rgb(255, 255, 255);
+  height: 100%;
+
+  border: 16px solid #f3f3f3; 
+    border-top: 16px solid #3498db; 
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 2s linear infinite;
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.weatherToday {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+  gap: 100px;
+}
+
+.date {
+  font-family: 'Gilroy Ultra Light';
+  margin-bottom: 20px;
+  color: white;
+}
+.weatherNow {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+.weather {
+  font-family: 'Gilroy Extra Bold';
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+.temperature {
+  font-size: 84px;
+  font-family: 'Gilroy Extra Bold';
+  font-weight: 700;
+  font-style: normal;
+}
+.weatherPhenomenon {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-family: 'Gilroy Ultra Light';
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.PhenomenonContent {
+  padding-top: 9px;
+}
+
+.params {
+  display: flex;
+  gap: 70px;
+  color: rgba(255, 255, 255, 0.6);
+  font-weight: 400;
+  font-size: 14px;
+  color: white;
+}
+.wind {
+  display: flex;
+  gap: 5px;
+}
+.windSpeed {
+  align-content: center;
+}
+.humidity {
+  display: flex;
+  gap: 5px;
+}
+.persent {
+  align-content: center;
+}
+.pressure {
+  display: flex;
+  gap: 5px;
+}
+.humidityText {
+  align-content: center;
+}
+
+@media (max-width: 776px) {
+  .weatherToday {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;    
+  }
+  .date{
+    display: flex;
+  }
+  .weather {
+    font-family: 'Gilroy Extra Bold';
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+  .weatherPhenomenon {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    font-family: 'Gilroy Ultra Light';
+    font-weight: 400;
+    font-size: 14px;
+  }
+  .feltWeather {
+    display: flex;
+    flex-direction: row;
+    font-weight: 500;
+    font-size: 22px;
+    padding-top: 16px;
+  }
+  .PhenomenonContent {
+    margin: 9px;
+  }
+}
+
+@media (max-width: 430px) {
+  .weatherToday {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    
+  }
+  .weatherNow {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  .params {
+    display: flex;
+    gap: 30px;
+    color: rgba(255, 255, 255, 0.6);
+    font-weight: 400;
+    font-size: 14px;
+    color: white;
+  }
+}
