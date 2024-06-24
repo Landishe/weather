@@ -2,7 +2,7 @@ import styles from './WeatherWeek.module.css'
 import { useEffect, useState } from 'react';
 import { weatherApi } from '../../utils/api.js'
 import React from 'react';
-import WeatherWeek from './WeatherWeek.jsx';
+
 
 
 
