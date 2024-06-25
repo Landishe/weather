@@ -48,9 +48,6 @@ function WeatherData() {
     console.log(weatherData.daily.time)
     return (
       <>
-        {/* <p className={styles.date}>
-          Максимальная температура: {weatherData?.daily?.temperature_2m_max}
-        </p> */}
         <WeatherWeek weatherData={weatherData.daily.time} /> 
       </>
     );
