@@ -4,8 +4,6 @@ import { weatherApi } from '../../utils/api.js'
 import React from 'react';
 import WeatherWeek from './WeatherWeek.jsx';
 
-
-
 import IconThunderstroms from '../../assets/pictures/icons/weather/thunderstroms.svg';
 import IconWind from '../../assets/pictures/icons/weather/wind.svg';
 import Iconhumidity from '../../assets/pictures/icons/weather/pressure.svg';
@@ -23,10 +21,10 @@ import IconSnow from '../../assets/pictures/icons/weather/snow.svg'
 function WeatherData() {
   const [weatherData, setWeatherData] = useState(null);
   const [isLoading, setIsLoading] = useState(true)
-  const [err, setErr] = useState('данные не загружены')
+  const [err, setErr] = useState(null)
 
   useEffect(() => {
-    const weatherApiAsync = async () => {
+    const weatherApiAsynchronic = async () => {
       try {
         setIsLoading(true);
         const weatherFetched = await weatherApi();
@@ -37,24 +35,18 @@ function WeatherData() {
       } finally {
         setIsLoading(false);
       }
-    };
-
-      weatherApiAsync();
+    }; weatherApiAsynchronic();
     }, []);
-      
-  if (weatherData && weatherData.daily) {
-    console.log(weatherData.daily.time)
+    
+  if (isLoading) {
     return <div className={styles.isLoading}></div>
   } else if (err) {
     return <div>Произошла ошибка: {err}</div>;
   } else { 
-    // Данные загружены, можно безопасно использовать weatherData
+    console.log(weatherData.daily.time)
     return (
       <>
-        {/* <p className={styles.date}>
-          Максимальная температура: {weatherData?.daily?.temperature_2m_max}
-        </p> */}
-        <WeatherWeek weatherData={weatherData.daily.time} /> 
+        <WeatherWeek dataDay={weatherData.daily.time} />
       </>
     );
   }

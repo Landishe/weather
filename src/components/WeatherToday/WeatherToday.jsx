@@ -41,7 +41,6 @@ function WeatherToday() {
   const weatherCodes = () => {
     if (weatherData && weatherData.current) {
       const weatherCode = weatherData.current.weather_code;
-      console.log(weatherData.daily.time)
       switch (weatherCode) {
         case 0: 
           return <img width={58} height={53} src={IconSunny} alt="Солнечно" /> 

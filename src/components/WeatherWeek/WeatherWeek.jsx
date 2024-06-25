@@ -1,6 +1,6 @@
 import styles from './WeatherWeek.module.css'
-import WeatherData from './WeatherData.jsx';
 import React from 'react';
+import WeatherData from './WeatherData';
 
 import IconThunderstroms from '../../assets/pictures/icons/weather/thunderstroms.svg';
 import IconWind from '../../assets/pictures/icons/weather/wind.svg';
@@ -16,14 +16,17 @@ import IconSnowFlurries from '../../assets/pictures/icons/weather/snow-flurries.
 import IconSleet from '../../assets/pictures/icons/weather/sleet.svg'
 import IconSnow from '../../assets/pictures/icons/weather/snow.svg'
 
-function WeatherWeek({weatherData}) {
-
-  return (
+function WeatherWeek({dataDay}) {
+ 
+    return (
+    
     <div className={styles.weatherWeek}>
       <section >
         <div className={styles.day}>
           <span className={styles.dayWeek}>понедельник</span>
-          <WeatherData/> 
+          {/* <div >
+            {dataDay.map((day, index) => ( <p key={index}>{day}</p> ))}
+          </div> */}
           <img
             width={78}
             height={71}
@@ -36,8 +39,8 @@ function WeatherWeek({weatherData}) {
       <section>
         <div className={styles.day}>
           <span className={styles.dayWeek}>вторник</span>
-          <span className={styles.date}>16 мая</span>
-          {/* {weatherCodes()} */}
+          <span className={styles.temperatureWeek}>+17</span>
+          
           <img
             width={78}
             height={71}
@@ -112,7 +115,8 @@ function WeatherWeek({weatherData}) {
           <span className={styles.temperatureWeek}>+22</span>
         </div>
       </section>
-    </div>
+      
+    </div>   
   );
 }
 
