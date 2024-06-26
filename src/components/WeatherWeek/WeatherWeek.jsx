@@ -1,6 +1,6 @@
 import styles from './WeatherWeek.module.css'
 import React from 'react';
-
+import WeatherData from './WeatherData';
 
 import IconThunderstroms from '../../assets/pictures/icons/weather/thunderstroms.svg';
 import IconWind from '../../assets/pictures/icons/weather/wind.svg';

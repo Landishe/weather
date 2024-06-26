@@ -48,6 +48,9 @@ function WeatherData() {
     console.log(weatherData.daily.time)
     return (
       <>
+      {/* Соня смотри, если я добавлю Параграф, и закоментирую элемент WeatherWeek и импортирую в WeatherWeek будет бесконечный ренедер. В самом конце я буду вызывать JSX компонент*/}
+        {/* <p>{weatherData.daily.time}</p> */}
+        
         <WeatherWeek weatherData={weatherData.daily.time} /> 
       </>
     );
