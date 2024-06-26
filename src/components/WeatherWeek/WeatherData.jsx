@@ -48,7 +48,7 @@ function WeatherData() {
     console.log(weatherData.daily.time)
     return (
       <>
-        
+        {/* Смотри Сонь, если я добавлю Параграф(или другую разметку) и передам в его в WeatherWeek то тогда параграф отобразиться в разметке, но не отрендериться */}
         <p dataDay = {weatherData.daily.time[0]}></p>
         
         {/* <WeatherWeek weatherData={weatherData.daily.time} />  */}
