@@ -3,6 +3,7 @@ import WeatherToday from '../WeatherToday/WeatherToday';
 import ClothesToday from '../ClothesToday/ClothesToday';
 import WeatherWeek from '../WeatherWeek/WeatherWeek';
 import city from '../../assets/pictures/icons/city.svg';
+import WeatherData from '../WeatherWeek/WeatherData';
 
 function MainPage() {
 
@@ -23,7 +24,7 @@ function MainPage() {
         <div className={styles.allBlocks}>
           <WeatherToday />
           <ClothesToday />
-          <WeatherWeek />
+          <WeatherData />
         </div>
       </div>
     </div>

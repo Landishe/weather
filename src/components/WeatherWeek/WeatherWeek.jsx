@@ -16,108 +16,106 @@ import IconSnowFlurries from '../../assets/pictures/icons/weather/snow-flurries.
 import IconSleet from '../../assets/pictures/icons/weather/sleet.svg'
 import IconSnow from '../../assets/pictures/icons/weather/snow.svg'
 
-function WeatherWeek({dataDay}) {
+function WeatherWeek({weatherData}) {
+  
+  const dataDay = weatherData.time
+  const Temperatur = weatherData.temperature_2m_max
 
-  console.log(dataDay)
-    return (
+   
+  return (
     
     <div className={styles.weatherWeek}>
       <section >
         <div className={styles.day}>
-          <span className={styles.dayWeek}>понедельник</span>
-          <WeatherData dataDay/>
-          {/* <div >
-            {dataDay.map((day, index) => ( <p key={index}>{day}</p> ))}
-          </div> */}
+          <span className={styles.dayWeek}>Понедельник</span>
+          <span className={styles.date}>{dataDay[0]}</span>
           <img
             width={78}
             height={71}
             src={IconThunderstroms}
             alt=""
           />
-          <span className={styles.temperatureWeek}>+15</span>
+          <span className={styles.temperatureWeek}>{Temperatur[0]}</span>
         </div>
       </section>
       <section>
         <div className={styles.day}>
-          <span className={styles.dayWeek}>вторник</span>
-          <span className={styles.temperatureWeek}>+17</span>
-          
+          <span className={styles.dayWeek}>Вторник</span>
+          <span className={styles.date}>{dataDay[1]}</span>          
           <img
             width={78}
             height={71}
             src={IconThunderstroms}
             alt=""
           />
-          <span className={styles.temperatureWeek}>+17</span>
+          <span className={styles.temperatureWeek}>{Temperatur[1]}</span>
         </div>
       </section>
       <section >
         <div className={styles.day}>
           <span className={styles.dayWeek}>среда</span>
-          <span className={styles.date}>17 мая</span>
+          <span className={styles.date}>{dataDay[2]}</span> 
           <img
             width={78}
             height={71}
             src={IconThunderstroms}
             alt=""
           />
-          <span className={styles.temperatureWeek}>+18</span>
+          <span className={styles.temperatureWeek}>{Temperatur[2]}</span>
         </div>
       </section>
       <section >
         <div className={styles.day}>
           <span className={styles.dayWeek}>четверг</span>
-          <span className={styles.date}>18 мая</span>
+          <span className={styles.date}>{dataDay[3]}</span> 
           <img
             width={78}
             height={71}
             src={IconSunny}
             alt=""
           />
-          <span className={styles.temperatureWeek}>+19</span>
+          <span className={styles.temperatureWeek}>{Temperatur[3]}</span>
         </div>
       </section>
       <section >
         <div className={styles.day}>
           <span className={styles.dayWeek}>Пятница</span>
-          <span className={styles.date}>19 мая</span>
+          <span className={styles.date}>{dataDay[4]}</span> 
           <img
             width={78}
             height={71}
             src={IconSleet}
             alt=""
           />
-          <span className={styles.temperatureWeek}>+20</span>
+          <span className={styles.temperatureWeek}>{Temperatur[4]}</span>
         </div>
       </section>
       <section >
         <div className={styles.day}>
           <span className={styles.dayWeek}>суббота</span>
-          <span className={styles.date}>20 мая</span>
+          <span className={styles.date}>{dataDay[5]}</span> 
           <img
             width={78}
             height={71}
             src={IconCloudy}
             alt=""
           />
-          <span className={styles.temperatureWeek}>+21</span>
+          <span className={styles.temperatureWeek}>{Temperatur[5]}</span>
         </div>
       </section>
       <section >
         <div className={styles.day}>
           <span className={styles.dayWeek}>воскресение</span>
-          <span className={styles.date}>21 мая</span>
+          <span className={styles.date}>{dataDay[6]}</span> 
           <img
             width={78}
             height={71}
             src={IconCloudy}
             alt=""
           />
-          <span className={styles.temperatureWeek}>+22</span>
+          <span className={styles.temperatureWeek}>{Temperatur[6]}</span>
         </div>
       </section>
-      
     </div>   
   );
 }

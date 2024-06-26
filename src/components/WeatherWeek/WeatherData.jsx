@@ -4,8 +4,6 @@ import { weatherApi } from '../../utils/api.js'
 import React from 'react';
 import WeatherWeek from './WeatherWeek.jsx';
 
-
-
 import IconThunderstroms from '../../assets/pictures/icons/weather/thunderstroms.svg';
 import IconWind from '../../assets/pictures/icons/weather/wind.svg';
 import Iconhumidity from '../../assets/pictures/icons/weather/pressure.svg';
@@ -39,6 +37,10 @@ function WeatherData() {
       }
     }; weatherApiAsynchronic();
     }, []);
+
+    
+    
+
     
   if (isLoading) {
     return <div className={styles.isLoading}></div>
@@ -47,11 +49,8 @@ function WeatherData() {
   } else { 
     console.log(weatherData.daily.time)
     return (
-      <>
-        {/* Смотри Сонь, если я добавлю Параграф(или другую разметку) и передам в его в WeatherWeek то тогда параграф отобразиться в разметке, но не отрендериться */}
-        <p dataDay = {weatherData.daily.time[0]}></p>
-        
-        {/* <WeatherWeek weatherData={weatherData.daily.time} />  */}
+      <> 
+        <WeatherWeek weatherData={weatherData.daily} /> 
       </>
     );
   }
