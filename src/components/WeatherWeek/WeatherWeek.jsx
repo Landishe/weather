@@ -17,13 +17,15 @@ import IconSleet from '../../assets/pictures/icons/weather/sleet.svg'
 import IconSnow from '../../assets/pictures/icons/weather/snow.svg'
 
 function WeatherWeek({dataDay}) {
- 
+
+  console.log(dataDay)
     return (
     
     <div className={styles.weatherWeek}>
       <section >
         <div className={styles.day}>
           <span className={styles.dayWeek}>понедельник</span>
+          <WeatherData dataDay/>
           {/* <div >
             {dataDay.map((day, index) => ( <p key={index}>{day}</p> ))}
           </div> */}
