@@ -36,28 +36,25 @@ function WeatherData() {
         setIsLoading(false);
       }
     }; weatherApiAsynchronic();
-    }, []);
+  }, []);
 
-    
-    
 
-    
+
   if (isLoading) {
     return <div className={styles.isLoading}></div>
   } else if (err) {
     return <div>Произошла ошибка: {err}</div>;
-  } else { 
-    console.log(weatherData.daily.time)
+  } else {
+   
     return (
       <> 
         <WeatherWeek weatherData={weatherData.daily} /> 
       </>
     );
-  }
-}
+  }}
+
    
 
 
 export default WeatherData;
 
-  
