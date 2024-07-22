@@ -1,13 +1,15 @@
-import styles from './WeatherWeek.module.css'
+import styles from './ClothesToday.module.css';
 import { useEffect, useState } from 'react';
 import { weatherApi } from '../../utils/api.js'
-import React from 'react';
-import WeatherWeek from './WeatherWeek.jsx';
+import ClothesToday from './ClothesToday.jsx';
 
-function WeatherData() {
+
+function WeatherDataClothes() {
   const [weatherData, setWeatherData] = useState(null);
   const [isLoading, setIsLoading] = useState(true)
   const [err, setErr] = useState(null)
+  
+  
 
   useEffect(() => {
     const weatherApiAsynchronic = async () => {
@@ -25,19 +27,24 @@ function WeatherData() {
   }, []);
 
   
+  
+
 
   if (isLoading) {
     return <div className={styles.isLoading}></div>
   } else if (err) {
     return <div>Произошла ошибка: {err}</div>;
-  } else {  
+  } else {
+    console.log (weatherData)
+  
     return (
       <> 
-        <WeatherWeek weatherData={weatherData.daily}/> 
+        
+        <ClothesToday weatherData={weatherData.current.weather_code} /> 
       </>
     );
   }}
 
 
-export default WeatherData;
+export default WeatherDataClothes;
 

@@ -1,8 +1,20 @@
 import React, { FC } from "react";
+import { useState } from "react";
 
-export const BoxIconMale = ({ ...props }) => {
+export const BoxIconMale = ({...props}) => {
+   
+  const [click, setClick] = useState(true)
+
+  
+  const clicksMan = () =>{
+    if (click){
+      console.log('работает мужская часть')
+    }
+  }
+
   return (
     <svg
+    onClick={clicksMan}
       {...props}
       width="24"
       height="24"

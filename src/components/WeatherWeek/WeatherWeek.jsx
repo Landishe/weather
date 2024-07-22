@@ -49,6 +49,7 @@ function WeatherWeek({weatherData}) {
             case 2: 
             case 3: return <img width={58} height={53} src={IconCloudy} alt="Облачно" />; 
             case 51: return <img width={58} height={53} src={IconDrizzle} alt="Моросящий дождь" />; 
+            case 53:
             case 55: return <img width={58} height={53} src={IconShowers} alt="Сильно дождь" />; 
             case 61: return <img width={58} height={53} src={IconRainSlight} alt="Облачно с прояснениями" /> ;
             case 63: return <img width={58} height={53} src={IconRainSlight} alt="Облачно с прояснениями" /> ;
