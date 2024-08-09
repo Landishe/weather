@@ -14,7 +14,7 @@ import IconShowers from '../../assets/pictures/icons/weather/showers.svg'
 import IconSnowFlurries from '../../assets/pictures/icons/weather/snow-flurries.svg'
 import IconSleet from '../../assets/pictures/icons/weather/sleet.svg'
 import IconSnow from '../../assets/pictures/icons/weather/snow.svg'
-import '../MainPage/all-section.css';
+import '../../global.css';
 
 
 function WeatherToday() {
@@ -195,7 +195,7 @@ function WeatherToday() {
               src={Iconhumidity}
               alt="влажность"
             />
-            <p className={styles.persent}>{weatherData.current.relative_humidity_2m + ` %`}</p>
+            <p className={styles.perсent}>{weatherData.current.relative_humidity_2m + ` %`}</p>
           </div>
           <div className={styles.pressure}>
             <img

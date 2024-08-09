@@ -1,15 +1,11 @@
-import styles from './TitlePage.module.css';
+import styles from './MainPage.module.css';
 import WeatherToday from '../WeatherToday/WeatherToday';
-import ClothesToday from '../ClothesToday/ClothesToday';
-
+import WeatherData from './WeatherData';
 import city from '../../assets/pictures/icons/city.svg';
-import WeatherData from '../WeatherWeek/WeatherData';
-import WeatherDataClothes from '../ClothesToday/WeatherDataClothes';
+
 
 function MainPage() {
 
-
-  
   return (
     <div className={styles.titlePage}>
       <div className={styles.cityBlock}>
@@ -24,7 +20,6 @@ function MainPage() {
         </div>
         <div className={styles.allBlocks}>
           <WeatherToday />
-          <WeatherDataClothes />
           <WeatherData />
         </div>
       </div>

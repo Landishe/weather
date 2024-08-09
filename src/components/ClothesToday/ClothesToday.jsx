@@ -1,4 +1,5 @@
 import styles from './ClothesToday.module.css';
+import {useState} from 'react'
 import winter_hat from '../../assets/pictures/icons/Clothes/winter_hat.svg';
 import hoddie from '../../assets/pictures/icons/Clothes/hoddie.svg';
 import scarf from '../../assets/pictures/icons/Clothes/scarf.svg';
@@ -6,15 +7,21 @@ import pants from '../../assets/pictures/icons/Clothes/pants.svg';
 import jacet from '../../assets/pictures/icons/Clothes/jacket.svg';
 import baseball from '../../assets/pictures/icons/Clothes/baseball.svg';
 import male_boots from '../../assets/pictures/icons/Clothes/male_boots.svg';
-import '../MainPage/all-section.css';
-import Togle from './Togle';
-import BoxIconFemale from './Female';
+import '../../global.css';
+import Togle from './Toggle';
+import ClothesData from './ClothesData'
 
-
-
-
-function ClothesToday({weatherData, togle}) {
+function ClothesToday({weatherData}) {
     
+  const [selectedSex, setSelectedSex] = useState('male');
+    
+    const handleSexChange=(sex) => {
+      setSelectedSex(sex)
+      console.log(sex)
+    }
+  
+
+  
   return (
    
     <section className="all-section">
@@ -22,13 +29,13 @@ function ClothesToday({weatherData, togle}) {
         <div className={styles.clothesOfWeather}>
           <span>Одежда по погоде</span>
           <div className={styles.sex}>
-            <Togle onClick={togle}/>
+            <Togle onChange={handleSexChange}/>
           </div>
         </div>
         <div className={styles.clothes}>
           <div className={styles.outerwear}>
             <div>
-            <BoxIconFemale weatherCodes={weatherData}/>
+            <ClothesData selectedSex={selectedSex} weatherCodes={weatherData}/>
             </div>
             <div>
               <img
