@@ -25,10 +25,10 @@
   justify-content: space-around;
   align-items: flex-start;
   gap: 100px;
+  /* z-index: 1; */
 }
 
 .date {
-  font-family: 'Gilroy Ultra Light';
   margin-bottom: 20px;
   color: white;
 }
@@ -81,7 +81,7 @@
   display: flex;
   gap: 5px;
 }
-.persent {
+.perсent {
   align-content: center;
 }
 .pressure {
@@ -92,7 +92,7 @@
   align-content: center;
 }
 
-@media (max-width: 776px) {
+@media (max-width: 768px) {
   .weatherToday {
     margin-top: 20px;
     display: flex;

@@ -1,0 +1,75 @@
+.allBlocks {
+  display: grid;
+  gap: 24px;
+  grid-template-rows: 442px 217px;
+  grid-template-columns: 658px 483px;
+  justify-content: center; 
+  align-content: center;
+}
+
+
+
+.titlePage {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  min-height: 100vh;
+  min-width: 100vh;
+  padding-top: 100px;
+}
+
+.cityChange {
+  padding-right: 15.5px;
+}
+
+.city {
+  display: flex;
+  justify-content: end;
+  margin-bottom: 21px;
+  align-items: center;
+  color: white;
+}
+
+.btnCity{
+  color: black;
+  font-size: 20px;
+  grid-row: 1
+}
+
+.btnCity:active{
+  text-decoration: underline red;
+  color: red
+}
+
+@media (max-width: 768px) {
+  .cityBlock{
+    width: 736px;
+  }
+  .titlePage {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    overflow: hidden;
+  }
+  .allBlocks {
+    margin-left: 16px;
+    width: 720px;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 430px) {
+  .allBlocks {
+    max-width: 361px;
+    display: flex;
+    flex-direction: column;
+  }
+  .allBlocks {
+    display: grid;
+    gap: 24px;
+    grid-template-columns: 361px;
+    grid-template-rows: 352px 458px;
+    
+  }
+}

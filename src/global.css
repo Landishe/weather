@@ -1,0 +1,21 @@
+.all-section{
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(15px);
+  padding-left: 28px;
+  border-radius: 15px;
+  color: rgb(255, 255, 255);
+  height: 100%;
+}
+
+@media (max-width:768px) {
+  .all-section{
+    padding-bottom: 16px;
+    padding-left: 16px;
+  }
+}
+@media (max-width:430px) {
+  .all-section{
+    padding-left: 12px;
+  }
+}
+
