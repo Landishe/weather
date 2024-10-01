@@ -1,7 +1,8 @@
 body {
   font-weight: 400;
-  min-width: 320px;
   font-family: 'Gilroy Ultra Light';
+  text-align: start;
+  /* background-image: url('assets/pictures/cloudy.png'); */
 }
 @font-face {
   font-family: 'Gilroy Extra Bold';
@@ -13,8 +14,8 @@ body {
 }
 /* стили для доступного скрытия элементов. Нужно для скринридеров */
 .visually-hidden:not(:focus):not(:active),
-input[type='checkbox'].visually-hidden,
-input[type='radio'].visually-hidden {
+  input[type='checkbox'].visually-hidden,
+  input[type='radio'].visually-hidden {
   position: absolute;
   clip: rect(0 0 0 0);
   top: 0;

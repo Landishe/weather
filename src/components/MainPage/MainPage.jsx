@@ -21,7 +21,7 @@ function MainPage() {
     { name: 'Санкт-Петербург', location_id: 1 },
     { name: 'Екатеринбург', location_id: 2 },
     { name: 'Краснодар', location_id: 3 },
-    { name: 'Новосибирск', location_id: 4 },
+    { name: 'Ярославль', location_id: 4 },
   ];
 
   useEffect(() => {
@@ -73,12 +73,13 @@ function MainPage() {
   } else if (loading) {
     return <div className={styles.isLoading}>Загрузка данных</div>;
   } else {
+    console.log(cityWeather.current.weather_code);
     return (
       <div
         className={
           cityWeather.current.weather_code === 0
             ? 'weatherImageSunny'
-            : cityWeather.current.weather_code === 3
+            : cityWeather.current.weather_code >= 3
             ? 'weatherImageCloudy'
             : cityWeather.current.weather_code >= 61
             ? 'weatherImageRain'
