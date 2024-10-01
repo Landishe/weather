@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/weather/static/css/main.428d9954.css",
-    "main.js": "/weather/static/js/main.917689e6.js",
+    "main.css": "/weather/static/css/main.655b0af1.css",
+    "main.js": "/weather/static/js/main.54966d18.js",
     "static/media/rain.png": "/weather/static/media/rain.66e4ea6e9dad281e18e3.png",
     "static/media/snowy.png": "/weather/static/media/snowy.9e7d075108c60667c926.png",
     "static/media/cloudy.png": "/weather/static/media/cloudy.054b974df6d8b597cf3a.png",
@@ -20,6 +20,7 @@
     "static/media/snow.svg": "/weather/static/media/snow.1c10f5c0e65ad974426cc2a571d3ede8.svg",
     "static/media/wind.svg": "/weather/static/media/wind.cbd548484e30d312fbf7b1c3b8aaf869.svg",
     "static/media/high_heels.svg": "/weather/static/media/high_heels.9aa06f3e8c77c6e777184d007ceb6f21.svg",
+    "static/media/sweater.svg": "/weather/static/media/sweater.7fe25237ada4ce6c49dd3522f8ae5292.svg",
     "static/media/high_heel_boots.svg": "/weather/static/media/high_heel_boots.039252fe3c8f92b72a6a54fb86fb1391.svg",
     "static/media/sleet.svg": "/weather/static/media/sleet.55100966c38b265e8b8210c04664a00b.svg",
     "static/media/jacket.svg": "/weather/static/media/jacket.c779f75fa13389e8a21b1cd4ca0913ca.svg",
@@ -41,11 +42,11 @@
     "static/media/shorts.svg": "/weather/static/media/shorts.272414a19d7444f439861a9931e9e238.svg",
     "index.html": "/weather/index.html",
     "static/media/cloudy.svg": "/weather/static/media/cloudy.f95f7ce6f5bb9a256cd295764e424f3a.svg",
-    "main.428d9954.css.map": "/weather/static/css/main.428d9954.css.map",
-    "main.917689e6.js.map": "/weather/static/js/main.917689e6.js.map"
+    "main.655b0af1.css.map": "/weather/static/css/main.655b0af1.css.map",
+    "main.54966d18.js.map": "/weather/static/js/main.54966d18.js.map"
   },
   "entrypoints": [
-    "static/css/main.428d9954.css",
-    "static/js/main.917689e6.js"
+    "static/css/main.655b0af1.css",
+    "static/js/main.54966d18.js"
   ]
 }
