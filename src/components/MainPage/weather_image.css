@@ -88,7 +88,8 @@
   .weatherImageCloudy {
     background-image: url('../../assets/pictures/cloudy.png');
     background-color: rgb(0, 0, 0, 0.25);
-    background-origin: border-box;
+    background-origin: cover;
     background-position: 0px 0px center;
+   
   }
 }

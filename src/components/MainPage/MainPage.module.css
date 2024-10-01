@@ -46,13 +46,11 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
-    
   }
   .allBlocks {
-    margin-left: 16px;
     display: flex;
     flex-direction: column;
-    gap: 20px
+    gap: 20px;
   }
   .city {
     margin-bottom: 21px;
@@ -61,7 +59,7 @@
     align-items: center;
     color: white;
   }
-} 
+}
 
 @media (max-width: 430px) {
   .titlePage {
@@ -76,7 +74,7 @@
     gap: 24px;
     grid-template-columns: 361px;
     grid-template-rows: 352px 458px;
-    justify-content: start;
+    justify-content: center;
     align-content: center;
   }
   .city {
