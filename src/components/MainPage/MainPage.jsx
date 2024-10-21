@@ -104,8 +104,7 @@ function MainPage() {
             </div>
             <div className={styles.allBlocks}>
               {cityWeather && <WeatherToday weatherData={cityWeather} />}
-              {cityWeather && (
-                <ClothesToday weatherData={cityWeather.current} />
+              {cityWeather && (<ClothesToday weatherData={cityWeather.current} />
               )}
               {cityWeather && <WeatherWeek weatherData={cityWeather.daily} />}
             </div>

@@ -2,7 +2,7 @@ import { useState } from "react"
 import ModalWindow from "./ModalWindow"
 import styles from './MainPage.module.css';
 
-function ButtonModal ({cities, handleCitySelect,selectedCity }){
+function ButtonModal ({cities, handleCitySelect, selectedCity }){
 
    const[modalActive, setModalActive] = useState(false)
     return(

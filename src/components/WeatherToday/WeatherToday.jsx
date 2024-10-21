@@ -6,32 +6,34 @@ import IconPressure from '../../assets/pictures/icons/weather/humidity.svg';
 import '../../global.css';
 
 function WeatherToday( {weatherData} ) {
-  console.log(weatherData)
-// Выводим дату на сегодня
-  const dateToday = new Date()
+  console.log(weatherData.current.time);
+
+  // Выводим дату на сегодня  
+  let dateToday = weatherData.current.time;
+  const date = new Date(dateToday);
+  console.log(date)
   let formaterDay = new Intl.DateTimeFormat('ru', { 
-    weekday: "long",
-    day: 'numeric',
-    month: "long",
-    hour: 'numeric',
-    minute: 'numeric'
+    dateStyle: "full",
+    timeStyle: 'short',
   });
-  
+
   return (
     <div className="all-section">
       <section className={styles.weatherToday}>
         <div className={styles.date}>
-          <span>{formaterDay.format(dateToday)}</span>
+          <span>{formaterDay.format()}</span>
         </div>
         <div className={styles.weatherNow}>
           <div className={styles.weather}>
-            <p className={styles.temperature}>{weatherData.current.temperature_2m}</p>
+            <p className={styles.temperature}>
+              {weatherData.current.temperature_2m}
+            </p>
             <div className={styles.weatherPhenomenon}>
-              <WeatherNow weatherCode={weatherData.current.weather_code}/>
+              <WeatherNow weatherCode={weatherData.current.weather_code} />
             </div>
           </div>
           <div className={styles.feltWeather}>
-            <p >{`ощущется как ` + weatherData.current.apparent_temperature}</p>
+            <p>{`ощущется как ` + weatherData.current.apparent_temperature}</p>
           </div>
         </div>
         <div className={styles.params}>
@@ -42,8 +44,12 @@ function WeatherToday( {weatherData} ) {
               src={IconWind}
               alt="скорость ветра"
             />
-            <p className={styles.windSpeed}>{weatherData.current.wind_speed_10m}</p>
-            <p className={styles.windSpeed}>{weatherData.current_units.wind_speed_10m}</p>
+            <p className={styles.windSpeed}>
+              {weatherData.current.wind_speed_10m}
+            </p>
+            <p className={styles.windSpeed}>
+              {weatherData.current_units.wind_speed_10m}
+            </p>
           </div>
           <div className={styles.pressure}>
             <img
@@ -52,7 +58,9 @@ function WeatherToday( {weatherData} ) {
               src={Iconhumidity}
               alt="влажность"
             />
-            <p className={styles.perсent}>{weatherData.current.relative_humidity_2m + ` %`}</p>
+            <p className={styles.perсent}>
+              {weatherData.current.relative_humidity_2m + ` %`}
+            </p>
           </div>
           <div className={styles.pressure}>
             <img
@@ -66,7 +74,7 @@ function WeatherToday( {weatherData} ) {
         </div>
       </section>
     </div>
- );}
+  );}
 
 
 export default WeatherToday;
