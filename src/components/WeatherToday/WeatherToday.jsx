@@ -17,6 +17,8 @@ function WeatherToday( {weatherData} ) {
     timeStyle: 'short',
   });
 
+  // console.log(formaterDay.format(dateToday));
+
   return (
     <div className="all-section">
       <section className={styles.weatherToday}>
