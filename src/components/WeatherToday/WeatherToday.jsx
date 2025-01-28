@@ -9,12 +9,15 @@ function WeatherToday( {weatherData} ) {
   console.log(weatherData.current.time);
 
   // Выводим дату на сегодня  
-  let dateToday = weatherData.current.time;
+  const dateToday = weatherData.current.time;
   const date = new Date(dateToday);
   console.log(date)
-  let formaterDay = new Intl.DateTimeFormat('ru', { 
-    dateStyle: "full",
-    timeStyle: 'short',
+  let formaterDay = new Intl.DateTimeFormat('ru', {
+    weekday: 'long',
+    day: 'numeric',
+    month: 'long',
+    hour: 'numeric',
+    minute: 'numeric',
   });
 
   // console.log(formaterDay.format(dateToday));
@@ -23,7 +26,7 @@ function WeatherToday( {weatherData} ) {
     <div className="all-section">
       <section className={styles.weatherToday}>
         <div className={styles.date}>
-          <span>{formaterDay.format()}</span>
+          <span>{formaterDay.format(date)}</span>
         </div>
         <div className={styles.weatherNow}>
           <div className={styles.weather}>
