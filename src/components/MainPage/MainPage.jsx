@@ -74,6 +74,7 @@ function MainPage() {
     return <div className={styles.isLoading}>Загрузка данных</div>
   } else {
     console.log(cityWeather.current.weather_code)
+    console.log(weatherData)
     return (
       <div
         className={
@@ -85,7 +86,8 @@ function MainPage() {
             ? 'weatherImageRain'
             : cityWeather.current.weather_code >= 71
             ? 'weatherImageSnowy'
-            : cityWeather.current.weather_code >= 71
+            : 'weatherImageSnowy'
+            
         }
       >
         <div className={styles.titlePage}>
